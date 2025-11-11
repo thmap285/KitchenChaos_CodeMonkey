@@ -1,4 +1,16 @@
 ﻿<Solution>
-  <Project Path="Assembly-CSharp-Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="SingularityGroup.HotReload.Editor.csproj" />
+  <Project Path="ComponentNames.Editor.csproj" />
+  <Project Path="VHierarchy.csproj" />
+  <Project Path="ProjectContextActions.csproj" />
+  <Project Path="Unity.InternalAPIEditorBridgeDev.004.csproj" />
+  <Project Path="ComponentNames.csproj" />
+  <Project Path="SingularityGroup.HotReload.Runtime.Public.csproj" />
+  <Project Path="Unity.PlayerPrefsEditor.Editor.csproj" />
+  <Project Path="SingularityGroup.HotReload.Runtime.csproj" />
+  <Project Path="VInspector.csproj" />
+  <Project Path="Sisus.Shared.Editor.InspectorInjectors.csproj" />
+  <Project Path="Unity.PlayerPrefsEditor.EditorResources.csproj" />
+  <Project Path="VRuler.csproj" />
+  <Project Path="Unity.PlayerPrefsEditor.Samples.SampleScene.csproj" />
 </Solution>
