@@ -9,6 +9,7 @@
   <Project Path="Unity.PlayerPrefsEditor.Editor.csproj" />
   <Project Path="SingularityGroup.HotReload.Runtime.csproj" />
   <Project Path="VInspector.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Sisus.Shared.Editor.InspectorInjectors.csproj" />
   <Project Path="Unity.PlayerPrefsEditor.EditorResources.csproj" />
   <Project Path="VRuler.csproj" />
