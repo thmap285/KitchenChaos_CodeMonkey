@@ -18,7 +18,7 @@ public class GameInput : MonoBehaviour
 
         input = input.normalized;
 
-        Debug.Log(input);
+        // Debug.Log(input);
         return input;
     }
 }
