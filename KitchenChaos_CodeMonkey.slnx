@@ -5,6 +5,7 @@
   <Project Path="ProjectContextActions.csproj" />
   <Project Path="Unity.InternalAPIEditorBridgeDev.004.csproj" />
   <Project Path="VFolders.csproj" />
+  <Project Path="VTabs.csproj" />
   <Project Path="ComponentNames.csproj" />
   <Project Path="Unity.PlayerPrefsEditor.Editor.csproj" />
   <Project Path="VInspector.csproj" />
