@@ -11,8 +11,37 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask counterLayerMask;
     [SerializeField] private GameInput gameInput;
 
+    private event EventHandler OnInteractAction;
+
     private bool isWalking = false;
     private Vector3 lastInteractDir;
+
+    private void Start()
+    {
+        gameInput.OnInteractAction += GameInput_OnInteractAction;
+    }
+
+    private void GameInput_OnInteractAction(object sender, EventArgs e)
+    {
+        Vector2 input = gameInput.GetMovementVectorNormalized();
+        Vector3 moveDir = new Vector3(input.x, 0, input.y);
+
+        if (moveDir != Vector3.zero)
+        {
+            lastInteractDir = moveDir;
+        }
+
+        if (Physics.Raycast(transform.position, moveDir, out RaycastHit hitInfo, 2f, counterLayerMask))
+        {
+            if (hitInfo.transform.TryGetComponent<ClearCounter>(out ClearCounter clearCounter))
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    clearCounter.Interact();
+                }
+            }
+        }
+    }
 
     private void Update()
     {
@@ -22,24 +51,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleInteraction()
     {
-        Vector2 input = gameInput.GetMovementVectorNormalized();
-        Vector3 moveDir = new Vector3(input.x, 0, input.y);
+        // Vector2 input = gameInput.GetMovementVectorNormalized();
+        // Vector3 moveDir = new Vector3(input.x, 0, input.y);
 
-        if(moveDir != Vector3.zero)
-        {
-            lastInteractDir = moveDir;
-        }
+        // if (moveDir != Vector3.zero)
+        // {
+        //     lastInteractDir = moveDir;
+        // }
 
-        if(Physics.Raycast(transform.position, moveDir, out RaycastHit hitInfo, 2f, counterLayerMask))
-        {
-            if(hitInfo.transform.TryGetComponent<ClearCounter>(out ClearCounter clearCounter))
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    clearCounter.Interact();
-                }
-            }
-        }
+        // if (Physics.Raycast(transform.position, moveDir, out RaycastHit hitInfo, 2f, counterLayerMask))
+        // {
+        //     if (hitInfo.transform.TryGetComponent<ClearCounter>(out ClearCounter clearCounter))
+        //     {
+        //         if (Input.GetKeyDown(KeyCode.E))
+        //         {
+        //             clearCounter.Interact();
+        //         }
+        //     }
+        // }
     }
 
     private void HandleMovement()
