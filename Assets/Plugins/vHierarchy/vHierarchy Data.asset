@@ -44,4 +44,4 @@ MonoBehaviour:
     globalId:
       globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-959089975-0
   bookmarkedScenePaths:
-  - Assets/Scenes/Gameplay.unity
+  - Assets/Scenes/GameScene.unity
